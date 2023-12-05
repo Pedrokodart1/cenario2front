@@ -20,7 +20,7 @@ export default function Home() {
   }
 
   function include() {
-    if (name === "") return alert("Digite um nome!");
+    if (name === "") return alert("Cadastre um nome!");
     setLoading(true);
     axios
       .post(`${apiUrl}/user`, { nome: name })
@@ -44,7 +44,7 @@ export default function Home() {
   }
 
   function find() {
-    if (name === "") return alert("Digite um nome!");
+    if (name === "") return alert("Cadastre um nome!");
     setLoading(true);
     axios
       .get(`${apiUrl}/user/${name}`)
