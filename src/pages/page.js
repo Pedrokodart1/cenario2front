@@ -23,7 +23,7 @@ export default function Home() {
     if (name === "") return alert("Digite um nome!");
     setLoading(true);
     axios
-      .post(`${apiUrl}/user`, { name: name })
+      .post(`${apiUrl}/user`, { nome: name })
       .then((response) => {
         console.log(response.data);
         alert("Usuário cadastrado com sucesso!");
@@ -123,7 +123,7 @@ export default function Home() {
             {users.length > 0 ? (
               users.map((item, index) => (
                 <div className={styles.item} key={index}>
-                  {item.name}
+                  {item.nome}
                 </div>
               ))
             ) : (
